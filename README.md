@@ -1,2 +1,74 @@
 # Game-UI-Extension
 这是一个用于设计和扩展游戏 UI 界面系统的 Codex Skill。它可以把一个游戏概念、已有界面风格、功能分类，整理成完整的游戏 UI 屏幕地图、关键界面说明和可交付给设计或开发的界面规格。
+
+适合用来做什么
+规划完整游戏 UI 架构
+扩展启动页、登录页、主界面、战斗 HUD、背包、商城、抽卡、活动、公会、排行榜等界面
+为某个游戏类型生成界面清单
+输出单个界面的布局、组件、状态和交互说明
+把零散 UI 想法整理成设计稿前的产品规格
+给前端实现提供组件和数据结构参考
+调用方式
+在 Codex 中可以这样使用：
+
+Use $game-ui-design to design a cohesive set of game UI screens for my game concept.
+也可以直接描述需求，例如：
+
+用 $game-ui-design 给一款二次元卡牌 RPG 设计完整 UI 界面结构。
+用 $game-ui-design 延展一个赛博朋克风格手游的登录、主城、战斗、抽卡、活动和排行榜界面。
+用 $game-ui-design 把这个游戏主界面扩展成完整运营活动 UI 系统。
+文件结构
+game-ui-design/
+├── SKILL.md
+├── agents/
+│   └── openai.yaml
+└── references/
+    └── ui-screen-taxonomy.md
+文件说明
+SKILL.md：Skill 主说明文件，定义触发场景、工作流程、输出格式和质量检查标准。
+agents/openai.yaml：Codex UI 展示信息，包括名称、简介和默认提示词。
+references/ui-screen-taxonomy.md：游戏 UI 界面分类参考，包含启动登录、核心玩法、养成、商业化、活动、社交、竞技、设置等模块。
+输出内容示例
+这个 Skill 通常会输出三类内容：
+
+UI Screen Map
+用于快速梳理游戏需要哪些界面。
+
+| Category | Screen | Priority | Player Goal | Key Components | Main States |
+|---|---|---|---|---|---|
+Screen Detail
+用于描述某个具体界面。
+
+## Screen: 主界面
+- Purpose:
+- Entry Points:
+- Primary Actions:
+- Layout:
+- Components:
+- States:
+- Interactions:
+- Visual/Motion Direction:
+- Edge Cases:
+Component Inventory
+用于前端实现或设计拆分。
+
+| Component | Used In | Props/Data | States |
+|---|---|---|---|
+覆盖的游戏 UI 类型
+启动页、登录页、公告弹窗、服务器选择、角色创建
+主城 / 大厅、任务、剧情、战斗 HUD、玩法准备、关卡选择、结算
+背包、仓库、角色详情、装备、技能、天赋、升星、突破
+商店、商城、充值、抽卡、战令、月卡、广告奖励
+签到、每日任务、限时活动、节日活动、回流活动
+好友、公会、聊天、邮件、玩家资料
+PvP、大厅匹配、排行榜、赛季结算、赛事
+阵容、卡组、Loadout、天赋规划、AI 战术
+换装、家园、拍照、回放、UGC
+设置、账号、客服、兑换码、无障碍
+设计原则
+先服务核心玩法，再扩展运营和商业化。
+每个界面都要明确玩家目标、入口、主操作和状态。
+主界面不要堆满所有活动入口，要按玩家价值和紧急程度分层。
+奖励、抽卡、商城、排行榜必须表达规则清楚，避免误导。
+高频操作要支持批量、筛选、快捷入口和清晰反馈。
+界面设计要贴合游戏题材，不要只做通用后台式列表。
