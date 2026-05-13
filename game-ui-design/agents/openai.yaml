@@ -1,0 +1,4 @@
+interface:
+  display_name: "Game UI Design"
+  short_description: "Plan complete game UI screen systems"
+  default_prompt: "Use $game-ui-design to design a cohesive set of game UI screens for my game concept."
